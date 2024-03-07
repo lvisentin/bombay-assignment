@@ -1,7 +1,6 @@
 import { useContext } from "react";
-import { BetOption, GameStatus } from "../../../hooks/useGame/useGame";
-import { UserBet } from "../../../shared/game/Game";
 import { GameContext } from "../../../context/GameContext/GameProvider";
+import { BetOption, GameStatus, UserBet } from "../../../hooks/useGame/useGame";
 import BetCard from "../../molecules/BetCard";
 
 const BetOptions = () => {

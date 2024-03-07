@@ -30,7 +30,7 @@ const useGame = () => {
   const [bets, setBets] = useState<UserBet[]>([]);
   const [allBetsValue, setAllBetsValue] = useState<number>(0);
   const [userBalance, setUserBalance] = useState<number>(5000);
-  const [betMessage, setBetMessage] = useState<string>("PICK YOUR POSITIONS");
+  const [betMessage, setBetMessage] = useState<string>("Pick your positions");
   const [computerChoice, setComputerChoice] = useState<string>("rock");
   const [playerChoice, setPlayerChoice] = useState<string>("paper");
   const [gameResult, setGameResult] = useState<GameResult>();
@@ -59,7 +59,7 @@ const useGame = () => {
 
   const placeBet = ({ betValue, option }: UserBet): void => {
     if (userBalance < betValue) {
-      setBetMessage("YOU HAVE NO BALANCE");
+      setBetMessage("You have no balance");
       return;
     }
 
@@ -68,6 +68,7 @@ const useGame = () => {
       doneBets.length > 1 &&
       !doneBets.some((done) => done.option.key === option.key)
     ) {
+      setBetMessage('You can not bet in more than 2 options')
       return;
     }
 
@@ -105,7 +106,7 @@ const useGame = () => {
     setGameStatus(GameStatus.BETTING);
     setGameResult(undefined);
     clearBets();
-    setBetMessage("PICK YOUR POSITIONS");
+    setBetMessage("Pick your positions");
   };
 
   const playGame = () => {
@@ -115,12 +116,12 @@ const useGame = () => {
     }
 
     if (userBalance < defaultBetValue) {
-      setBetMessage("YOU HAVE NO BALANCE");
+      setBetMessage("You have no balance");
       return;
     }
 
     if (bets.length === 0) {
-      setBetMessage("PLEASE MAKE A BET");
+      setBetMessage("Please make a bet before playing");
       return;
     }
 
