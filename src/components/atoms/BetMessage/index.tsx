@@ -19,11 +19,11 @@ const WinningMessage = () => {
   const { gameResult, playerChoice } = useContext(GameContext);
   return (
     <h1 className="text-center ">
-      <span className="text-green-500 font-bold text-3xl">
+      <span className="text-green-500 font-bold text-3xl uppercase">
         {playerChoice} WON!
       </span>
       <br />
-      <span className="text-golden text-2xl">YOU WIN </span>
+      <span className="text-golden text-2xl uppercase">YOU WIN </span>
       <span className="amount text-white text-2xl">${gameResult?.amount}</span>
     </h1>
   );
@@ -34,9 +34,9 @@ const LosingMessage = () => {
 
   return (
     <h1 className="text-center ">
-      <span className="text-red-500 font-bold text-3xl">COMPUTER WON!</span>
+      <span className="text-red-500 font-bold text-3xl uppercase">COMPUTER WON!</span>
       <br />
-      <span className="text-golden text-2xl">YOU LOSE </span>
+      <span className="text-golden text-2xl uppercase">YOU LOSE </span>
       <span className="amount text-white text-2xl">
         ${gameResult?.betAmount}
       </span>
@@ -47,9 +47,9 @@ const LosingMessage = () => {
 const TieMessage = () => {
   return (
     <h1 className="text-center ">
-      <span className="text-yellow-500 font-bold text-3xl">IT'S A TIE!</span>
+      <span className="text-yellow-500 font-bold text-3xl uppercase">IT'S A TIE!</span>
       <br />
-      <span className="text-golden text-2xl">YOU GET BACK YOUR BET</span>
+      <span className="text-golden text-2xl uppercase">YOU GET BACK YOUR BET</span>
     </h1>
   );
 };
