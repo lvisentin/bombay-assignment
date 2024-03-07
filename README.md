@@ -1,30 +1,35 @@
-# React + TypeScript + Vite
+# Bombay Assignment
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is the tech assignment for the Front-end developer position in the Bombay team.
 
-Currently, two official plugins are available:
+Made by Lucas Visentin.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project is made with React + TypeScript + Vite, you can find some important information below.
 
-## Expanding the ESLint configuration
+## Folder Structure
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+![Alt text](image.png)
 
-- Configure the top-level `parserOptions` property like this:
+This is the folder structure of the project, in this project I decided to use ContextAPI together with a custom hook (useGame) to store the game information, such as bet amounts, which bets the user picked and etc.
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: "latest",
-    sourceType: "module",
-    project: ["./tsconfig.json", "./tsconfig.node.json"],
-    tsconfigRootDir: __dirname,
-  },
-};
+## How it looks
+
+![Alt text](image-1.png)
+
+![Alt text](image-2.png)
+
+![Alt text](image-3.png)
+
+
+## Notes
+
+Because of the lack of APIs and real calculations (for example: deciding which was the computer choice in a backend), I added a setTimeout function which delays the showing of the result of the game, so the user can feel like its a real calculation for the result.
+
+## Running Instructions
+
+```bash
+git clone git@github.com:lvisentin/bombay-assignment.git
+cd bombay-assignment
+npm i
+npm run dev
 ```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

@@ -131,10 +131,11 @@ const useGame = () => {
 
     setPlayerChoice(match.bets[0].option.label);
     setComputerChoice(computerChoice);
-    setUserBalance((prev) => (prev += match.amount));
 
     setTimeout(() => {
       setGameStatus(GameStatus.FINISHED);
+      setUserBalance((prev) => (prev += match.amount));
+
       const winnerBet = match?.bets.filter(
         (bet: BetResult) => bet.result === BetOutcome.WIN,
       );

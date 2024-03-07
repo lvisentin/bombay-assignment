@@ -10,7 +10,7 @@ const BetOptions = () => {
 
   return betOptions.map((option: BetOption, index: number) => (
     <BetCard
-      disabled={gameStatus === GameStatus.IN_PROGRESS}
+      disabled={gameStatus !== GameStatus.BETTING}
       key={index}
       label={option.label}
       betValue={

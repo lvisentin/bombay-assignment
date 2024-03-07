@@ -8,7 +8,7 @@ const RockPaperScissorsPage = () => {
     <>
       <Header />
 
-      <main className="flex flex-col items-center justify-center h-full mt-[30%]">
+      <main className="flex flex-col items-center justify-center h-full mt-[15%]">
         <BetMessage />
 
         <div className="betOptions flex items-center gap-4 my-12">
